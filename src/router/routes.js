@@ -23,7 +23,6 @@ const routes = [
     path: '/',
     component: () => import('layouts/MyLayout.vue'),
     children: [
-     
       { path: '\edit_profile',name:'edit_profile',component: () => import('components/edit_profile.vue') },
       { path: '\add_criminal',name:'add_criminal',component: () => import('components/add_criminal.vue') },
       { path: '\search_criminal',name:'search_criminal',component: () => import('components/search_criminal.vue') },
@@ -36,8 +35,8 @@ const routes = [
 // Always leave this as last one
 if (process.env.MODE !== 'ssr') {
   routes.push({
-    path: '*',
-    component: () => import('pages/Error404.vue')
+     path: '*',
+     component: () => import('pages/Error404.vue')
   })
 }
 
